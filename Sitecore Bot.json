@@ -1,0 +1,864 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "Sitecore Bot",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "AppInsights Traces"
+    },
+    {
+      "name": "Create User"
+    },
+    {
+      "name": "Delete User"
+    },
+    {
+      "name": "Disable User"
+    },
+    {
+      "name": "Enable User"
+    },
+    {
+      "name": "Greeting"
+    },
+    {
+      "name": "List Indexes"
+    },
+    {
+      "name": "List Users"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Rebuild Index"
+    },
+    {
+      "name": "Sign In"
+    },
+    {
+      "name": "Sign out"
+    },
+    {
+      "name": "Smart Publish"
+    },
+    {
+      "name": "Status"
+    },
+    {
+      "name": "Subscribe To Indexing"
+    },
+    {
+      "name": "Subscribe To Publishing"
+    },
+    {
+      "name": "UnSubscribe From Indexing"
+    },
+    {
+      "name": "UnSubscribe From Publishing"
+    },
+    {
+      "name": "XDB Sessions"
+    }
+  ],
+  "entities": [
+    {
+      "name": "domain"
+    },
+    {
+      "name": "indexname"
+    },
+    {
+      "name": "role"
+    },
+    {
+      "name": "top"
+    },
+    {
+      "name": "username"
+    },
+    {
+      "name": "xdb_type"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "datetime",
+    "email",
+    "number"
+  ],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "hello",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "login",
+      "intent": "Sign In",
+      "entities": []
+    },
+    {
+      "text": "log me out",
+      "intent": "Sign out",
+      "entities": []
+    },
+    {
+      "text": "sign out",
+      "intent": "Sign out",
+      "entities": []
+    },
+    {
+      "text": "logout",
+      "intent": "Sign out",
+      "entities": []
+    },
+    {
+      "text": "howdy",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "i want to login",
+      "intent": "Sign In",
+      "entities": []
+    },
+    {
+      "text": "list users",
+      "intent": "List Users",
+      "entities": []
+    },
+    {
+      "text": "new user",
+      "intent": "Create User",
+      "entities": []
+    },
+    {
+      "text": "status",
+      "intent": "Status",
+      "entities": []
+    },
+    {
+      "text": "hi bot",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "create user",
+      "intent": "Create User",
+      "entities": []
+    },
+    {
+      "text": "create new user",
+      "intent": "Create User",
+      "entities": []
+    },
+    {
+      "text": "delete user",
+      "intent": "Delete User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 7,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "logoff",
+      "intent": "Sign out",
+      "entities": []
+    },
+    {
+      "text": "forget me",
+      "intent": "Sign out",
+      "entities": []
+    },
+    {
+      "text": "create a new user",
+      "intent": "Create User",
+      "entities": []
+    },
+    {
+      "text": "signout",
+      "intent": "Sign out",
+      "entities": []
+    },
+    {
+      "text": "delete the user",
+      "intent": "Delete User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 11,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "remove the user",
+      "intent": "Delete User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 11,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "can you create a new user for me?",
+      "intent": "Create User",
+      "entities": []
+    },
+    {
+      "text": "create me a new user",
+      "intent": "Create User",
+      "entities": []
+    },
+    {
+      "text": "disable info",
+      "intent": "Disable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 8,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "disable the user info",
+      "intent": "Disable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "can you disable the user info",
+      "intent": "Disable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 25,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "disable the user info",
+      "intent": "Disable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "disable user info",
+      "intent": "Disable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 13,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "enable user info",
+      "intent": "Enable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "enable the user info",
+      "intent": "Enable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 16,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "delete user info",
+      "intent": "Delete User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "enable info",
+      "intent": "Enable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 7,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "show me the admins",
+      "intent": "List Users",
+      "entities": [
+        {
+          "entity": "role",
+          "startPos": 12,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "show me a list of admins",
+      "intent": "List Users",
+      "entities": [
+        {
+          "entity": "role",
+          "startPos": 18,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "show me a list of sitecore users",
+      "intent": "List Users",
+      "entities": [
+        {
+          "entity": "domain",
+          "startPos": 18,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "show me a list of users",
+      "intent": "List Users",
+      "entities": []
+    },
+    {
+      "text": "show sessions since 3 days",
+      "intent": "XDB Sessions",
+      "entities": []
+    },
+    {
+      "text": "show sessions from the last 2 days",
+      "intent": "XDB Sessions",
+      "entities": []
+    },
+    {
+      "text": "list domain users",
+      "intent": "List Users",
+      "entities": [
+        {
+          "entity": "domain",
+          "startPos": 5,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "active contacts right now",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 7,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "how many active contacts do we have now",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "role",
+          "startPos": 16,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "show current sessions",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 13,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "show me yesterday active contacts",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 25,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "show me active contacts from yesterday",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 15,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "show me contacts from yesterday",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 8,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "notify me of publishing",
+      "intent": "Subscribe To Publishing",
+      "entities": []
+    },
+    {
+      "text": "let me know when someone publishes",
+      "intent": "Subscribe To Publishing",
+      "entities": []
+    },
+    {
+      "text": "subscribe to publishing",
+      "intent": "Subscribe To Publishing",
+      "entities": []
+    },
+    {
+      "text": "subscribe to publish",
+      "intent": "Subscribe To Publishing",
+      "entities": []
+    },
+    {
+      "text": "create new user for <a href=\"mailto:info@suneco.nl\">info@suneco.nl</a>",
+      "intent": "Create User",
+      "entities": []
+    },
+    {
+      "text": "show sessions from yesterday",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 5,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "delete user info",
+      "intent": "Delete User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "show tomorrow sessions",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 14,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "show me yesterday sessions",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 18,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "show me yesterday contacts",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 18,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "disable user info",
+      "intent": "Disable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 13,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "delete info",
+      "intent": "Delete User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 7,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "list administrators",
+      "intent": "List Users",
+      "entities": [
+        {
+          "entity": "role",
+          "startPos": 5,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "disable info@suneco.nl",
+      "intent": "Disable User",
+      "entities": []
+    },
+    {
+      "text": "delete user info",
+      "intent": "Delete User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "show yesterday contacts",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 15,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "show me today contacts",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 14,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "show today sessions",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "list comprehensive users",
+      "intent": "List Users",
+      "entities": [
+        {
+          "entity": "role",
+          "startPos": 5,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "list sitecore users",
+      "intent": "List Users",
+      "entities": [
+        {
+          "entity": "domain",
+          "startPos": 5,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "enable user info",
+      "intent": "Enable User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "perform smart publish",
+      "intent": "Smart Publish",
+      "entities": []
+    },
+    {
+      "text": "unsubscribe from publishing",
+      "intent": "UnSubscribe From Publishing",
+      "entities": []
+    },
+    {
+      "text": "rebuild index sitecore_master_index",
+      "intent": "Rebuild Index",
+      "entities": [
+        {
+          "entity": "indexname",
+          "startPos": 14,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "create user info@suneco.nl",
+      "intent": "Create User",
+      "entities": []
+    },
+    {
+      "text": "publish the entire thing",
+      "intent": "Smart Publish",
+      "entities": []
+    },
+    {
+      "text": "simply publish",
+      "intent": "Smart Publish",
+      "entities": []
+    },
+    {
+      "text": "rebuild social_messages_web",
+      "intent": "Rebuild Index",
+      "entities": [
+        {
+          "entity": "indexname",
+          "startPos": 8,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "subscribe to indexing",
+      "intent": "Subscribe To Indexing",
+      "entities": []
+    },
+    {
+      "text": "stop indexing updates",
+      "intent": "UnSubscribe From Indexing",
+      "entities": []
+    },
+    {
+      "text": "unsubscribe from indexing",
+      "intent": "UnSubscribe From Indexing",
+      "entities": []
+    },
+    {
+      "text": "show me a list of indexes",
+      "intent": "List Indexes",
+      "entities": []
+    },
+    {
+      "text": "could you rebuild the sitecore_web_index",
+      "intent": "Rebuild Index",
+      "entities": [
+        {
+          "entity": "indexname",
+          "startPos": 31,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "subscribe to indexing updates",
+      "intent": "Subscribe To Indexing",
+      "entities": []
+    },
+    {
+      "text": "unsubscribe from indexing events",
+      "intent": "UnSubscribe From Indexing",
+      "entities": []
+    },
+    {
+      "text": "subscribe to indexing events",
+      "intent": "Subscribe To Indexing",
+      "entities": []
+    },
+    {
+      "text": "unsubscribe from index updates",
+      "intent": "UnSubscribe From Indexing",
+      "entities": []
+    },
+    {
+      "text": "subscribe to index updates",
+      "intent": "Subscribe To Indexing",
+      "entities": []
+    },
+    {
+      "text": "subscribe to indexes",
+      "intent": "Subscribe To Indexing",
+      "entities": []
+    },
+    {
+      "text": "guess who's here!",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "howdy bot! how are you doing?",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "can you authenticate me?",
+      "intent": "Sign In",
+      "entities": []
+    },
+    {
+      "text": "can you identify me?",
+      "intent": "Sign In",
+      "entities": []
+    },
+    {
+      "text": "give me updates on indexes",
+      "intent": "Subscribe To Indexing",
+      "entities": []
+    },
+    {
+      "text": "notify me on publish events",
+      "intent": "Subscribe To Publishing",
+      "entities": []
+    },
+    {
+      "text": "delete the user info",
+      "intent": "Delete User",
+      "entities": [
+        {
+          "entity": "username",
+          "startPos": 16,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "show me the top 25 log messages",
+      "intent": "AppInsights Traces",
+      "entities": [
+        {
+          "entity": "top",
+          "startPos": 16,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "show me the last log messages",
+      "intent": "AppInsights Traces",
+      "entities": []
+    },
+    {
+      "text": "show me 100 log messages",
+      "intent": "AppInsights Traces",
+      "entities": [
+        {
+          "entity": "top",
+          "startPos": 8,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "show me the top 25 messages",
+      "intent": "AppInsights Traces",
+      "entities": [
+        {
+          "entity": "top",
+          "startPos": 16,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "show me last 10 messages",
+      "intent": "AppInsights Traces",
+      "entities": [
+        {
+          "entity": "top",
+          "startPos": 13,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "show me yesterday interactions",
+      "intent": "XDB Sessions",
+      "entities": [
+        {
+          "entity": "xdb_type",
+          "startPos": 18,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "publish the website",
+      "intent": "Smart Publish",
+      "entities": []
+    }
+  ]
+}
